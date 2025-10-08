@@ -44,4 +44,22 @@ public class Player : MonoBehaviour, InputSystem_Actions.IPlayerActions
             }
         }
     }
+
+    public void OnClick(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            Vector2 click = Camera.main.ScreenToWorldPoint(context.ReadValue<Vector2>());
+            
+            Ray ray = Camera.main.ScreenPointToRay(click);
+            RaycastHit hit;
+
+            Physics.Raycast(ray, out hit);
+
+            if (hit.collider.gameObject.layer == 6)
+            {
+                gameObject.SetActive(false);
+            }
+        }
+    }
 }

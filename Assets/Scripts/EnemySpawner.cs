@@ -6,7 +6,7 @@ public class EnemySpawner : MonoBehaviour
 {
     private float timeBetweenEnemies = 2f;
     [SerializeField] private GameObject enemy;
-    private Stack<GameObject> EnemiesStack = new Stack<GameObject>();
+    public Stack<GameObject> EnemiesStack = new Stack<GameObject>();
 
     /*private Color[] enemyColors =
     {
@@ -24,7 +24,8 @@ public class EnemySpawner : MonoBehaviour
 
             if (EnemiesStack.Count == 0)
             {
-                Instantiate(enemy, transform.position, Quaternion.identity);
+                GameObject enem = Instantiate(enemy, transform.position, Quaternion.identity);
+                enem.GetComponent<Enemy>().spawner = this;
             }
             else
             {
@@ -47,6 +48,8 @@ public class EnemySpawner : MonoBehaviour
 
         go.SetActive(true);
         go.transform.position = transform.position;
+        go.transform.rotation = Quaternion.identity;
+        go.GetComponent<Rigidbody2D>().linearVelocityX = 5f;
 
         return go;
     }

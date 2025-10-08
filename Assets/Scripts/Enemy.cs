@@ -1,4 +1,6 @@
+using System;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEditor.SearchService;
 using UnityEngine;
@@ -10,6 +12,7 @@ public class Enemy : MonoBehaviour
     private float _enemyLimitPositionsRight;
     private float speed;
     public EnemySpawner spawner;
+    private GameObject textGameOver;
 
     private void Awake()
     {
@@ -17,6 +20,7 @@ public class Enemy : MonoBehaviour
         _enemyLimitPositionsLeft = -9;
         _enemyLimitPositionsRight = 9;
         speed = 5f;
+        GameObject canvas = GameObject.Find("Canvas");
     }
 
     private void Update()
@@ -47,6 +51,8 @@ public class Enemy : MonoBehaviour
         {
             collision.gameObject.SetActive(false);
             Destroy(gameObject);
+
+            textGameOver.SetActive(true);
         }
     }
 
