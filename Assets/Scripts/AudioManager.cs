@@ -4,7 +4,7 @@ using UnityEngine;
 
 public enum AudioClips
 {
-    Shoot
+    Hit
 }
 
 public class AudioManager : MonoBehaviour
@@ -16,6 +16,6 @@ public class AudioManager : MonoBehaviour
     private void Awake()
     {
         Instance = this;
-        ClipList.Add(AudioClips.Shoot, Clips[0]);
+        ClipList.Add(AudioClips.Hit, Clips[0]);
     }
 }

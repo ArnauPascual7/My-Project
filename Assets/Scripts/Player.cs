@@ -49,16 +49,31 @@ public class Player : MonoBehaviour, InputSystem_Actions.IPlayerActions
     {
         if (context.performed)
         {
-            Vector2 click = Camera.main.ScreenToWorldPoint(context.ReadValue<Vector2>());
-            
-            Ray ray = Camera.main.ScreenPointToRay(click);
-            RaycastHit hit;
+            Vector3 click = Camera.main.ScreenToWorldPoint(context.ReadValue<Vector2>());
+            RaycastHit2D hit = Physics2D.Raycast(click, Vector3.forward, 12f);
 
-            Physics.Raycast(ray, out hit);
-
-            if (hit.collider.gameObject.layer == 6)
+            if (hit)
             {
-                gameObject.SetActive(false);
+                AudioClip clip = null;
+
+                foreach (var kvp in AudioManager.Instance.ClipList)
+                {
+                    if (AudioManager.Instance.ClipList.ContainsKey(AudioClips.Hit))
+                    {
+                        clip = kvp.Value;
+                    }
+                }
+
+                AudioSource aSource = GetComponent<AudioSource>();
+
+                if (clip != null)
+                {
+                    aSource.clip = clip;
+                }
+
+                aSource.Play();
+
+                //gameObject.SetActive(false);
             }
         }
     }

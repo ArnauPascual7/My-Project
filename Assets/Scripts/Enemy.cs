@@ -52,7 +52,7 @@ public class Enemy : MonoBehaviour
             collision.gameObject.SetActive(false);
             Destroy(gameObject);
 
-            textGameOver.SetActive(true);
+            //textGameOver.SetActive(true);
         }
     }
 
