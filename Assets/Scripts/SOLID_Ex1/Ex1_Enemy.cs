@@ -1,6 +1,6 @@
 using UnityEngine;
 [RequireComponent(typeof(MoveBehaviour))]
-public class SEnemy : MonoBehaviour
+public class Ex1_Enemy : MonoBehaviour
 {
     private MoveBehaviour _mb;
     private Vector2 _direction;

@@ -2,7 +2,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 [RequireComponent(typeof(MoveBehaviour))]
-public class SPlayer : MonoBehaviour, InputSystem_Actions.IPlayerActions
+public class Ex1_Player : MonoBehaviour, InputSystem_Actions.IPlayerActions
 {
     private MoveBehaviour _mb;
     private InputSystem_Actions inputActions;
