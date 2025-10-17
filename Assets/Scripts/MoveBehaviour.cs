@@ -5,6 +5,7 @@ public class MoveBehaviour : MonoBehaviour
 {
     private Rigidbody2D _rb;
     public float speed;
+    public float jumpForce;
 
     private void Awake()
     {
@@ -13,6 +14,11 @@ public class MoveBehaviour : MonoBehaviour
 
     public void MoveCharacter(Vector2 direction)
     {
-        _rb.AddForce(direction);
+        _rb.linearVelocityX = direction.x * speed;
+    }
+
+    public void JumpCharacter()
+    {
+        _rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
     }
 }
