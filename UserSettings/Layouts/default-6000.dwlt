@@ -1261,7 +1261,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/SOLID_Ex3
+    - Assets/Scenes
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1271,16 +1271,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts/SOLID_Ex3
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: E:\ArnauPascual\Unity\Projects\My project
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 86c80000
-    m_LastClickedID: 51334
-    m_ExpandedIDs: 0000000060b2000062b20000
+    m_SelectedIDs: 40b40000
+    m_LastClickedID: 46144
+    m_ExpandedIDs: 00000000a8b20000aab20000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1309,7 +1309,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000060b2000062b20000
+    m_ExpandedIDs: 00000000a8b20000aab20000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1457,7 +1457,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 200dffff0e82ffffdc82ffffdc83ffff5e9affffc09bffff34a3ffff9ca4ffff4ea5ffff08fbffff
+      m_ExpandedIDs: 2491ffff08fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -2106,7 +2106,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 1
+    m_EnableMouseInput: 0
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
