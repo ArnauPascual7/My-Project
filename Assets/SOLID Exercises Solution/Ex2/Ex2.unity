@@ -137,7 +137,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &420616126
 Transform:
   m_ObjectHideFlags: 0
@@ -388,9 +388,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5154dc29b3710a649a9608dc116e232e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 0}
-  _rb: {fileID: 0}
-  _shootPoint: {fileID: 0}
 --- !u!50 &464343199
 Rigidbody2D:
   serializedVersion: 5

@@ -1,12 +1,13 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-public class PlayerEx1 : CharacterEx1, InputSystem_Actions.IPlayerEx1Actions
+public class PlayerEx1 : CharacterEx1, InputSystem_Actions.IPlayerActions
 {
     private InputSystem_Actions inputActions;
     private void Awake()
     {
         inputActions = new InputSystem_Actions();
-        inputActions.PlayerEx1.SetCallbacks(this);
+        inputActions.Player.SetCallbacks(this);
+        //inputActions.PlayerEx1.SetCallbacks(this);
     }
     private void OnEnable()
     {
@@ -16,15 +17,25 @@ public class PlayerEx1 : CharacterEx1, InputSystem_Actions.IPlayerEx1Actions
     {
         inputActions.Disable();
     }
-    public void OnJump(InputAction.CallbackContext context)
+    /*public void OnJump(InputAction.CallbackContext context)
     {
         _jb.Jump();
-    }
+    }*/
 
     public void OnMove(InputAction.CallbackContext context)
     {
         Vector2 direction = context.ReadValue<Vector2>();
         direction.y = 0;
         _mb.Move(direction);
+    }
+
+    public void OnAttack(InputAction.CallbackContext context)
+    {
+        _jb.Jump();
+    }
+
+    public void OnClick(InputAction.CallbackContext context)
+    {
+        throw new System.NotImplementedException();
     }
 }
